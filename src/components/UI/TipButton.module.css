@@ -1,0 +1,10 @@
+.tip-button {
+  width: 8em;
+  height: 2.8em;
+  color: #fff;
+  background-color: #00494d;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

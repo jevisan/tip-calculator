@@ -1,0 +1,15 @@
+.controls {
+  width: 50%;
+}
+
+.tip-buttons-container {
+  height: 10em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.control-title {
+  margin-top: 0;
+}
