@@ -1,16 +1,28 @@
 .input {
-  border: 2px solid #26c0ab;
-  background-color: #f4fafa;
+  background-color: var(--light-cyan);
   border-radius: 8px;
   padding: 0 1em;
-  height: 2.8rem;
+  height: 2.8em;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.input:focus-within {
+  border: 2px solid var(--primary-color);
+  box-sizing: border-box;
 }
 
 .input > input {
   border: 0;
   width: 100%;
   background-color: #f4fafa;
+  font-family: 'Space Mono', monospace;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--dark-cyan);
+}
+
+.input > input:focus {
+  outline: none;
 }

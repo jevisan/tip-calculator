@@ -1,0 +1,41 @@
+.totals-card {
+  margin: 2em;
+  background-color: var(--dark-cyan);
+  border-radius: 16px;
+  padding: 1.5em;
+  color: var(--white);
+}
+
+.tip-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tip-section__titles h3 {
+  margin: 0;
+  font-size: 1.02rem;
+}
+
+.tip-section__titles p {
+  margin-top: 0;
+  margin-bottom: 1em;
+  color: var(--grayish-cyan);
+  font-weight: 700;
+}
+
+.tip-section__amount {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--primary-color)
+}
+
+.totals-card button {
+  width: 100%;
+  height: 2.5em;
+  background-color: var(--primary-color);
+  color: var(--dark-cyan);
+  border: 0;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}

@@ -1,0 +1,28 @@
+.controls {
+  margin: 2em;
+}
+
+.controls > .control-title:first-child {
+  margin-top: 0;
+}
+
+.tip-buttons-container {
+  height: 12em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.control-title:not(first) {
+  margin-top: 2em;
+  color: var(--dark-grayish-cyan);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+@media(min-width: 450px) {
+  .controls {
+    width: 50%;
+  }
+}

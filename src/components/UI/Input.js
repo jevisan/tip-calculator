@@ -6,7 +6,7 @@ const Input = props => {
   return (
     <div className={classes.input} style={props.styles}>
       <img src={props.icon} />
-      <input type="number" />
+      <input type="text" />
     </div>
   );
 }

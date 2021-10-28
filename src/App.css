@@ -1,3 +1,12 @@
 body {
   background-color: #c5e4e7;
+  font-family: 'Space Mono', monospace;
+  
+  --primary-color: #26c0ab;
+  --dark-cyan: #00494d;
+  --dark-grayish-cyan: #5e7a7d;
+  --grayish-cyan: #7f9c9f;
+  --light-grayish-cyan: #c5e4e7;
+  --light-cyan: #f4fafa;
+  --white: #FFF;
 }

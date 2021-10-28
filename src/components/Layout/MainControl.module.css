@@ -1,15 +1,13 @@
-.controls {
-  width: 50%;
-}
-
-.tip-buttons-container {
-  height: 10em;
+.container {
+  position: absolute;
+  top: 3em;
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.control-title {
-  margin-top: 0;
+.logo {
+  width: 6em;
+  margin-bottom: 2em;
 }
