@@ -6,14 +6,6 @@
   margin-top: 0;
 }
 
-.tip-buttons-container {
-  height: 12em;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
 .control-title:not(first) {
   margin-top: 2em;
   color: var(--dark-grayish-cyan);

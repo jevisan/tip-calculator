@@ -2,7 +2,7 @@ import React from 'react';
 
 import classes from './TotalsCard.module.css';
 
-const TotalsCard = () => {
+const TotalsCard = props => {
   return (
     <div className={classes['totals-card']}>
       <div className={classes['tip-section']}>
@@ -11,7 +11,7 @@ const TotalsCard = () => {
           <p>/ person</p>
         </div>
         <div className={classes['tip-section__amount']}>
-          $4.27
+          ${props.tipPerPerson.toFixed(2)}
         </div>
       </div>
       <div className={classes['tip-section']}>
@@ -20,7 +20,7 @@ const TotalsCard = () => {
           <p>/ person</p>
         </div>
         <div className={classes['tip-section__amount']}>
-          $32.79
+          ${props.totalPerPerson.toFixed(2)}
         </div>
       </div>
       <button>RESET</button>

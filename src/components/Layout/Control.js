@@ -1,38 +1,71 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Input from '../UI/Input';
-import TipButton from '../UI/TipButton';
 
 import iconDollar from '../../assets/icon-dollar.svg';
 import iconPerson from '../../assets/icon-person.svg';
 
 import classes from './Control.module.css';
+import TipButtons from './TipButtons';
 
-const Control = () => {
-  const preconfigTips = [
-    5, 10, 15, 25, 50
-  ];
+const Control = props => {
+  const [billValue, setBillValue] = useState(0);
+  const [peopleNumber, setPeopleNumber] = useState(0);
+  const [percentage, setPercentage] = useState(0);
 
-  const calculateTip = () => {
-    
+  useEffect(() => {
+    console.log(billValue, percentage, peopleNumber);
+    let totalPerPerson = 0;
+    let tipPerPerson = 0;
+    if (billValue && percentage && peopleNumber) {
+      totalPerPerson = billValue / peopleNumber;
+      tipPerPerson = (percentage * billValue / 100) / peopleNumber;
+    }
+    props.onValuesChange(tipPerPerson, totalPerPerson);
+  }, [billValue, peopleNumber, percentage]);
+
+  const valuesChangedHandler = (name, value) => {
+    if (name === 'bill') {
+      setBillValue(value);
+    } else if (name === 'custom-persentage') {
+      setPercentage(value)
+    } else if (name === 'people') {
+      setPeopleNumber(value);
+    } else {
+      setPercentage(value);
+    }
   };
 
   return (
     <div className={classes.controls}>
       <h3 className={classes['control-title']}>Bill</h3>
-      <Input icon={iconDollar} valueChanged={calculateTip} />
+      <Input
+        name="bill"
+        icon={iconDollar}
+        onValueChanged={valuesChangedHandler}
+      />
       <h3 className={classes['control-title']}>Select Tip %</h3>
       <div className={classes['tip-buttons-container']}>
-        {preconfigTips.map(item => <TipButton tip={item} />)}
-        <Input styles={
-          {
+        <TipButtons
+          onSelected={valuesChangedHandler}
+        />
+        <Input 
+          styles={{
             'width': '6.6em', 
             'height': '2.8em', 
             'border-radius': '4px'
-          }} />
+          }}
+          name="custom-percentage"
+          onValueChanged={valuesChangedHandler}
+        />
       </div>
       <h3 className={classes['control-title']}>Number of People</h3>
-      <Input icon={iconPerson} />
+      <Input
+        name="people"
+        value={peopleNumber}
+        icon={iconPerson}
+        onValueChanged={valuesChangedHandler}
+      />
     </div>
   );
 }
