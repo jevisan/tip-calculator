@@ -49,15 +49,6 @@ const Control = props => {
         <TipButtons
           onSelected={valuesChangedHandler}
         />
-        <Input 
-          styles={{
-            'width': '6.6em', 
-            'height': '2.8em', 
-            'border-radius': '4px'
-          }}
-          name="custom-percentage"
-          onValueChanged={valuesChangedHandler}
-        />
       </div>
       <h3 className={classes['control-title']}>Number of People</h3>
       <Input

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import TipButton from '../UI/TipButton';
+import Input from '../UI/Input';
 
 import classes from './TipButtons.module.css';
 
@@ -35,6 +36,16 @@ const TipButtons = props => {
           onSelected={selectedHandler}
         />
       )}
+      <Input 
+          styles={{
+            'width': '7.1em', 
+            'height': '3em', 
+            'border-radius': '4px'
+          }}
+          className={classes['input-tip-button']}
+          name="custom-percentage"
+          onValueChanged={props.onSelected}
+        />
     </div>
   );
 }
